@@ -55,17 +55,20 @@ public class MarsRover {
         }
     }
 
-    public void executeCommand(String m) {
-        switch (m) {
-            case "R":
-                turnRight();
-                break;
-            case "L":
-                turnLeft();
-                break;
-            case "M":
-                move();
-                break;
+    public void executeCommand(String commands) {
+
+        for (String command : commands.split("")){
+            switch (command) {
+                case "R":
+                    turnRight();
+                    break;
+                case "L":
+                    turnLeft();
+                    break;
+                case "M":
+                    move();
+                    break;
+            }
         }
 
     }
