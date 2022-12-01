@@ -29,6 +29,7 @@ public class MarsRover {
     }
 
     private Position turnLeft(Position position) {
+        position.setDirection(directions.get((directions.indexOf(position.getDirection()) + 3) % 4));
         return position;
     }
 
