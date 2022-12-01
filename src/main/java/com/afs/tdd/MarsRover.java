@@ -96,4 +96,7 @@ public class MarsRover {
     public String getDirection() {
         return direction;
     }
+
+    public void executeCommands(String commands) {
+    }
 }
