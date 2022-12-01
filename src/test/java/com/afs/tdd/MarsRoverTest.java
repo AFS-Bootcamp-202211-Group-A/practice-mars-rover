@@ -113,4 +113,16 @@ class MarsRoverTest {
         assertEquals(0,marsRover.getLocationY());
         assertEquals("N",marsRover.getDirection());
     }
+    @Test
+        // 0 0 N M -> 0 1 N
+        // 0 1 N R -> 0 1 E
+        // 0 1 E M -> 1 1 E
+        // 1 1 E L -> 1 1 N
+    void should_go_to_1_1_N_when_execute_commands_given_command_M_R_M_L() {
+        MarsRover marsRover = new MarsRover(0,0,"N");
+        marsRover.executeCommand("MRML");
+        assertEquals(1,marsRover.getLocationX());
+        assertEquals(1,marsRover.getLocationY());
+        assertEquals("N",marsRover.getDirection());
+    }
 }

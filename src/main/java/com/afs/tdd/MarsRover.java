@@ -19,14 +19,17 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void executeCommand(String command) {
-        if(command.equals("M")){
-            move();
-        } else if (command.equals("L")) {
-            turnLeft();
-        } else if (command.equals("R")) {
-            turnRight();
-        }
+    public void executeCommand(String commands) {
+        //for (String command : commands.split("")) {}
+        Arrays.stream(commands.split("")).forEach(command -> {
+            if(command.equals("M")){
+                move();
+            } else if (command.equals("L")) {
+                turnLeft();
+            } else if (command.equals("R")) {
+                turnRight();
+            }
+        });
     }
 
     private void turnRight() {
