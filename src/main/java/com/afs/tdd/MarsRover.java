@@ -26,6 +26,10 @@ public class MarsRover {
         switch (direction){
             case "N":
                 direction = "E";
+                break;
+            case "E":
+                direction = "S";
+                break;
             default:
 
         }
