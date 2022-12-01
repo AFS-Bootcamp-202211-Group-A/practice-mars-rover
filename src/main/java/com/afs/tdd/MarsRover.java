@@ -9,6 +9,8 @@ public class MarsRover {
     int locationY;
     String direction;
 
+    static final ArrayList<String> directions = new ArrayList<>(Arrays.asList("N", "E", "S", "W", "N", "E", "S", "W"));
+
     public MarsRover(int locationX, int locationY, String direction){
         this.locationX = locationX;
         this.locationY = locationY;
@@ -29,13 +31,18 @@ public class MarsRover {
     }
 
     public void turnRight(){
-        ArrayList<String> directions = new ArrayList<>(Arrays.asList("N", "E", "S", "W", "N"));
         this.direction = directions.get(directions.indexOf(this.direction) + 1);
+    }
+
+    public void turnLeft(){
+        this.direction = directions.get(directions.indexOf(this.direction) + 3);
     }
 
     public void executeCommand(String m) {
         if (m.equals("R")){
             turnRight();
+        } else if (m.equals("L")){
+            turnLeft();
         }
 
     }
