@@ -38,11 +38,19 @@ public class MarsRover {
         this.direction = directions.get(directions.indexOf(this.direction) + 3);
     }
 
+    private void move(){
+        if (this.direction.equals("N")){
+            locationY += 1;
+        }
+    }
+
     public void executeCommand(String m) {
         if (m.equals("R")){
             turnRight();
         } else if (m.equals("L")){
             turnLeft();
+        } else if (m.equals("M")){
+            move();
         }
 
     }
