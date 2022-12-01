@@ -5,11 +5,11 @@ import java.util.Arrays;
 
 public class MarsRover {
 
-    int locationX;
-    int locationY;
-    String direction;
+    private int locationX;
+    private int locationY;
+    private String direction;
 
-    static final ArrayList<String> directions = new ArrayList<>(Arrays.asList("N", "E", "S", "W", "N", "E", "S", "W"));
+    static final private ArrayList<String> directions = new ArrayList<>(Arrays.asList("N", "E", "S", "W", "N", "E", "S", "W"));
 
     public MarsRover(int locationX, int locationY, String direction){
         this.locationX = locationX;
@@ -30,33 +30,42 @@ public class MarsRover {
         return direction;
     }
 
-    public void turnRight(){
+    private void turnRight(){
         this.direction = directions.get(directions.indexOf(this.direction) + 1);
     }
 
-    public void turnLeft(){
+    private void turnLeft(){
         this.direction = directions.get(directions.indexOf(this.direction) + 3);
     }
 
     private void move(){
-        if (this.direction.equals("N")){
-            locationY += 1;
-        } else if (this.direction.equals("E")){
-            locationX += 1;
-        } else if (this.direction.equals("S")){
-            locationY -= 1;
-        } else if (this.direction.equals("W")){
-            locationX -= 1;
+        switch (this.direction) {
+            case "N":
+                locationY += 1;
+                break;
+            case "E":
+                locationX += 1;
+                break;
+            case "S":
+                locationY -= 1;
+                break;
+            case "W":
+                locationX -= 1;
+                break;
         }
     }
 
     public void executeCommand(String m) {
-        if (m.equals("R")){
-            turnRight();
-        } else if (m.equals("L")){
-            turnLeft();
-        } else if (m.equals("M")){
-            move();
+        switch (m) {
+            case "R":
+                turnRight();
+                break;
+            case "L":
+                turnLeft();
+                break;
+            case "M":
+                move();
+                break;
         }
 
     }
