@@ -20,7 +20,7 @@ class MarsRoverTest {
     @Test
     void should_go_to_0_n1_S_when_execute_command_given_0_0_S_M() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0,0,"S");
         //when
 
         marsRover.executeCommand("M");
