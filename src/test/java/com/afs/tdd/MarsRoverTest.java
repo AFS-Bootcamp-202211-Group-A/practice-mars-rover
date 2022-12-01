@@ -21,7 +21,7 @@ class MarsRoverTest {
     @Test
     void should_go_to_1_0_E_when_execute_command_given_0_0_E_M() {
         //given
-        MarsRover marsRover = new MarsRover(1, 0, "E");
+        MarsRover marsRover = new MarsRover(0, 0, "E");
         //when
         marsRover.executeCommand("M");
 
