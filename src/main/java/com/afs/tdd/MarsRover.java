@@ -7,6 +7,7 @@ public class MarsRover {
     public static final String E = "E";
     public static final String W = "W";
     public static final String M = "M";
+    public static final String L = "L";
     private int locationX;
     private int locationY;
     private String direction;
@@ -19,7 +20,7 @@ public class MarsRover {
     public void executeCommand(String command){
         if (command.equals(M)){
             move();
-        }else if(command.equals("L")){
+        }else if(command.equals(L)){
             turnLeft();
         }
     }
