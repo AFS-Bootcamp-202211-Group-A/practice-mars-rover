@@ -18,14 +18,19 @@ public class MarsRover {
     }
 
     private void move() {
-        if(direction.equals("N")){
-            locationY++;
-        } else if (direction.equals("E")) {
-            locationX++;
-        } else if (direction.equals("S")) {
-            locationY--;
-        } else if (direction.equals("W")) {
-            locationX--;
+        switch (direction) {
+            case "N":
+                locationY++;
+                break;
+            case "E":
+                locationX++;
+                break;
+            case "S":
+                locationY--;
+                break;
+            case "W":
+                locationX--;
+                break;
         }
     }
 
