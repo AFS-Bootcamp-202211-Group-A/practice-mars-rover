@@ -13,7 +13,10 @@ public class MarsRover {
     static List<String> directions = Arrays.asList("N", "E", "S", "W");
 
     public Position executeBatchCommand(Position position, String batchCommand) {
-        
+
+        for (String command: batchCommand.split("")){
+            position = executeCommand(position, command);
+        }
         return position;
     }
 
