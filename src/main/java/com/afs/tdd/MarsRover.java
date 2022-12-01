@@ -26,7 +26,11 @@ public class MarsRover {
     }
 
     public void executeBatchCommands(String batchCommand){
-        executeCommand(batchCommand);
+        batchCommand
+                .chars()
+                .mapToObj(command -> (char)command)
+                .map( command ->  String.valueOf(command))
+                .forEach(command -> executeCommand(command));
     }
 
     private void turnRight(){
