@@ -24,6 +24,9 @@ public class MarsRover {
             case "N":
                 locationY++;
                 break;
+            case "E":
+                locationX++;
+                break;
             default:
         }
     }
