@@ -50,4 +50,13 @@ class MarsRoverTest {
         assertEquals(0,marsRover.getLocationY());
         assertEquals("W",marsRover.getDirection());
     }
+    @Test
+        // 0 0 W L -> 0 0 S
+    void should_go_to_0_0_S_when_execute_command_given_0_0_W_L() {
+        MarsRover marsRover = new MarsRover(0,0,"W");
+        marsRover.executeCommand("L");
+        assertEquals(0,marsRover.getLocationX());
+        assertEquals(0,marsRover.getLocationY());
+        assertEquals("S",marsRover.getDirection());
+    }
 }
