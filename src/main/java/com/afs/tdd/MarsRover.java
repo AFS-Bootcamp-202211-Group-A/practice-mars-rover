@@ -9,7 +9,7 @@ public class MarsRover {
     private int locationY;
     private String direction;
 
-    static final private ArrayList<String> directions = new ArrayList<>(Arrays.asList("N", "E", "S", "W", "N", "E", "S", "W"));
+    static final private ArrayList<String> directions = new ArrayList<>(Arrays.asList("N", "E", "S", "W", "N", "E", "S"));
 
     public MarsRover(int locationX, int locationY, String direction){
         this.locationX = locationX;
