@@ -22,14 +22,22 @@ public class MarsRover {
             return move(position);
         } else if (command == "R") {
             return turnRight(position);
+        } else if (command == "L") {
+            return turnLeft(position);
         }
         return null;
+    }
+
+    private Position turnLeft(Position position) {
+        return position;
     }
 
     private Position turnRight(Position position) {
         position.setDirection(directions.get((directions.indexOf(position.getDirection()) + 1) % 4));
         return position;
     }
+
+
 
     private Position move(Position position) {
         String direction = position.getDirection();

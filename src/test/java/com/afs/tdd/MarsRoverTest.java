@@ -58,7 +58,7 @@ class MarsRoverTest{
     }
 
     @Test
-    public void givenPosition00NCommandR_whenExecuteCommand_thenReturnMinus00E() {
+    public void givenPosition00NCommandR_whenExecuteCommand_thenReturn00E() {
         //given
         Position position = new Position(0, 0, "N");
 
@@ -71,7 +71,7 @@ class MarsRoverTest{
     }
 
     @Test
-    public void givenPosition00ECommandR_whenExecuteCommand_thenReturnMinus00S() {
+    public void givenPosition00ECommandR_whenExecuteCommand_thenReturn00S() {
         //given
         Position position = new Position(0, 0, "E");
 
@@ -84,7 +84,7 @@ class MarsRoverTest{
     }
 
     @Test
-    public void givenPosition00SCommandR_whenExecuteCommand_thenReturnMinus00W() {
+    public void givenPosition00SCommandR_whenExecuteCommand_thenReturn00W() {
         //given
         Position position = new Position(0, 0, "S");
 
@@ -97,7 +97,7 @@ class MarsRoverTest{
     }
 
     @Test
-    public void givenPosition00WCommandR_whenExecuteCommand_thenReturnMinus00N() {
+    public void givenPosition00WCommandR_whenExecuteCommand_thenReturn00N() {
         //given
         Position position = new Position(0, 0, "W");
 
@@ -109,8 +109,57 @@ class MarsRoverTest{
         assertThat(actual).usingRecursiveComparison().isEqualTo(new Position(0, 0, "N"));
     }
 
+    @Test
+    public void givenPosition00NCommandL_whenExecuteCommand_thenReturn00W() {
+        //given
+        Position position = new Position(0, 0, "N");
 
+        //when
+        MarsRover car = new MarsRover();
+        Position actual = car.executeCommand(position, "L");
 
+        //then
+        assertThat(actual).usingRecursiveComparison().isEqualTo(new Position(0, 0, "W"));
+    }
+
+    @Test
+    public void givenPosition00WCommandL_whenExecuteCommand_thenReturn00S() {
+        //given
+        Position position = new Position(0, 0, "W");
+
+        //when
+        MarsRover car = new MarsRover();
+        Position actual = car.executeCommand(position, "L");
+
+        //then
+        assertThat(actual).usingRecursiveComparison().isEqualTo(new Position(0, 0, "S"));
+    }
+
+    @Test
+    public void givenPosition00SCommandL_whenExecuteCommand_thenReturn00E() {
+        //given
+        Position position = new Position(0, 0, "S");
+
+        //when
+        MarsRover car = new MarsRover();
+        Position actual = car.executeCommand(position, "L");
+
+        //then
+        assertThat(actual).usingRecursiveComparison().isEqualTo(new Position(0, 0, "E"));
+    }
+
+    @Test
+    public void givenPosition00ECommandL_whenExecuteCommand_thenReturn00N() {
+        //given
+        Position position = new Position(0, 0, "E");
+
+        //when
+        MarsRover car = new MarsRover();
+        Position actual = car.executeCommand(position, "L");
+
+        //then
+        assertThat(actual).usingRecursiveComparison().isEqualTo(new Position(0, 0, "N"));
+    }
 
 
 
