@@ -44,7 +44,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_1_W_when_execute_command_given_1_1_W() {
+    void should_go_to_0_1_W_when_execute_command_given_1_1_W_M() {
         //given
         MarsRover marsRover = new MarsRover(1, 1, "W");
         //when
@@ -55,4 +55,6 @@ class MarsRoverTest {
         assertEquals(1, marsRover.getLocationY());
         assertEquals("W", marsRover.getDirection());
     }
+
+
 }
