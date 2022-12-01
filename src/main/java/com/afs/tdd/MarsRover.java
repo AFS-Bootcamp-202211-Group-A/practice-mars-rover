@@ -2,12 +2,17 @@ package com.afs.tdd;
 
 import javafx.geometry.Pos;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class MarsRover {
 
-    public Position executeBatchCommand(Position position, String batchCommand){
+    static List<String> directions = Arrays.asList("N", "E", "S", "W");
+
+    public Position executeBatchCommand(Position position, String batchCommand) {
         return null;
     }
 
@@ -15,10 +20,13 @@ public class MarsRover {
 
         if (command == "M") {
             return move(position);
+        } else if (command == "R") {
+            return turnRight(position);
         }
-        else{
+        return null;
+    }
 
-        }
+    private Position turnRight(Position position) {
         return null;
     }
 
