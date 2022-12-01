@@ -8,6 +8,7 @@ public class MarsRover {
     public static final String W = "W";
     public static final String M = "M";
     public static final String L = "L";
+    public static final String R = "R";
     private int locationX;
     private int locationY;
     private String direction;
@@ -17,56 +18,70 @@ public class MarsRover {
         this.locationY = locationY;
         this.direction = direction;
     }
-    public void executeCommand(String command){
-        if (command.equals(M)){
-            move();
-        }else if(command.equals(L)){
-            turnLeft();
-        } else if (command.equals("R")) {
-            turnRight();
 
+    public void executeCommand(String command) {
+        switch (command) {
+            case M:
+                move();
+                break;
+            case L:
+                turnLeft();
+                break;
+            case R:
+                turnRight();
+                break;
         }
     }
 
     private void turnRight() {
-        if (direction.equals(N)){
-            direction = E;
-        }else if (direction.equals(S)) {
-            direction = W;
-
-        }else if (direction.equals(E)) {
-            direction = S;
-
-        }else if (direction.equals(W)) {
-            direction = N;
-
+        switch (direction) {
+            case N:
+                direction = E;
+                break;
+            case S:
+                direction = W;
+                break;
+            case E:
+                direction = S;
+                break;
+            case W:
+                direction = N;
+                break;
         }
+
     }
 
     private void turnLeft() {
-        if (direction.equals(N)){
-            direction = W;
-        } else if (direction.equals(S)) {
-            direction = E;
-
-        }else if (direction.equals(E)) {
-            direction = N;
-
-        }else if (direction.equals(W)) {
-            direction = S;
-
+        switch (direction) {
+            case N:
+                direction = W;
+                break;
+            case S:
+                direction = E;
+                break;
+            case E:
+                direction = N;
+                break;
+            case W:
+                direction = S;
+                break;
         }
     }
 
     private void move() {
-        if (direction.equals(N)){
-            locationY++;
-        } else if (direction.equals(S)){
-            locationY--;
-        }else if (direction.equals(E)){
-            locationX++;
-        }else if (direction.equals(W)){
-            locationX--;
+        switch (direction) {
+            case N:
+                locationY++;
+                break;
+            case S:
+                locationY--;
+                break;
+            case E:
+                locationX++;
+                break;
+            case W:
+                locationX--;
+                break;
         }
     }
 
