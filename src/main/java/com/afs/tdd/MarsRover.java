@@ -25,6 +25,10 @@ public class MarsRover {
         }
     }
 
+    public void executeBatchCommands(String batchCommand){
+
+    }
+
     private void turnRight(){
         switch (direction){
             case "N":
