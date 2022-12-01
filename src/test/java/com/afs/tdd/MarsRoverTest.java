@@ -151,6 +151,7 @@ class MarsRoverTest {
         assertEquals(0,marsRover.getLocationY());
         assertEquals("N",marsRover.getDirection());
     }
+    @Test
     void should_go_to_1_1_N_when_execute_commands_given_0_0_N_MRML() {
         //given
         MarsRover marsRover = new MarsRover(1,1,"N");

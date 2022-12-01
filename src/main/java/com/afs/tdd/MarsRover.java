@@ -1,5 +1,7 @@
 package com.afs.tdd;
 
+import java.util.Arrays;
+
 public class MarsRover {
 
     public static final String N = "N";
@@ -98,5 +100,10 @@ public class MarsRover {
     }
 
     public void executeCommands(String commands) {
+        Arrays.asList(commands).stream()
+            .map(command -> {
+                executeCommand(command);
+                return null;
+            });
     }
 }
