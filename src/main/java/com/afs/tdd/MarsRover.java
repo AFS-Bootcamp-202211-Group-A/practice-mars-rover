@@ -13,19 +13,20 @@ public class MarsRover {
     static List<String> directions = Arrays.asList("N", "E", "S", "W");
 
     public Position executeBatchCommand(Position position, String batchCommand) {
-        return null;
+        
+        return position;
     }
 
     public Position executeCommand(Position position, String command) {
 
-        if (command == "M") {
+        if (command.equals("M")) {
             return move(position);
-        } else if (command == "R") {
+        } else if (command.equals("R")) {
             return turnRight(position);
-        } else if (command == "L") {
+        } else if (command.equals("L")) {
             return turnLeft(position);
         }
-        return null;
+        return position;
     }
 
     private Position turnLeft(Position position) {

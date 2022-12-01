@@ -161,6 +161,17 @@ class MarsRoverTest{
         assertThat(actual).usingRecursiveComparison().isEqualTo(new Position(0, 0, "N"));
     }
 
+    @Test
+    public void givenPosition00NCommand_whenExecutebatchCommand_thenReturn1minus1N() {
+        //given
+        Position position = new Position(0, 0, "N");
 
+        //when
+        MarsRover car = new MarsRover();
+        Position actual = car.executeBatchCommand(position, "MLMR");
+
+        //then
+        assertThat(actual).usingRecursiveComparison().isEqualTo(new Position(-1, 1, "N"));
+    }
 
 }
