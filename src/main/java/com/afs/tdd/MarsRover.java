@@ -26,7 +26,7 @@ public class MarsRover {
     }
 
     public void executeBatchCommands(String batchCommand){
-//        executeCommand(batchCommand);
+        executeCommand(batchCommand);
     }
 
     private void turnRight(){
