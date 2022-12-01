@@ -145,4 +145,20 @@ class MarsRoverTest {
         assertEquals(0, rover.getLocationY());
         assertEquals("E", rover.getDirection());
     }
+
+    @Test
+    void should_0_0_S_when_M_given_0_1_S() {
+        //given
+        MarsRover rover = new MarsRover(0,1, "S");
+
+        //when
+        rover.executeCommand("M");
+
+        //then
+        assertEquals(0, rover.getLocationX());
+        assertEquals(0, rover.getLocationY());
+        assertEquals("S", rover.getDirection());
+    }
+
+
 }
