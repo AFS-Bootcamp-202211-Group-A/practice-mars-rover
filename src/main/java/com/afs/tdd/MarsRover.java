@@ -5,21 +5,38 @@ public class MarsRover {
     private int locationY;
     private String direction;
     public MarsRover(int locationX, int locationY  , String direction) {
+        this.locationX = locationX;
+        this.locationY = locationY;
+        this.direction = direction;
     }
 
     public void executeCommand(String command) {
+        switch (command) {
+            case "M":
+                this.move();
+                break;
+            default:
+        }
+    }
 
+    private void move() {
+        switch (direction){
+            case "N":
+                locationY++;
+                break;
+            default:
+        }
     }
 
     public int getLocationX() {
-        return 0;
+        return locationX;
     }
 
     public int getLocationY() {
-        return 0;
+        return locationY;
     }
 
     public String getDirection() {
-        return null;
+        return direction;
     }
 }
