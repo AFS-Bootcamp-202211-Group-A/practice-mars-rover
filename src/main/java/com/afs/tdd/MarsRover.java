@@ -1,12 +1,7 @@
 package com.afs.tdd;
 
-import javafx.geometry.Pos;
-
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class MarsRover {
 
