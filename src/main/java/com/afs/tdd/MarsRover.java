@@ -55,9 +55,11 @@ public class MarsRover {
         }
     }
 
-    public void executeCommand(String commands) {
+    public void executeBatchCommands(String commands){
+        Arrays.stream(commands.split("")).forEach(this::executeCommand);
+    }
 
-        for (String command : commands.split("")){
+    public void executeCommand(String command) {
             switch (command) {
                 case "R":
                     turnRight();
@@ -69,7 +71,6 @@ public class MarsRover {
                     move();
                     break;
             }
-        }
 
     }
 }

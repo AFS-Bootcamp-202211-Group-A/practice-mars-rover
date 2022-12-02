@@ -180,7 +180,7 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0,0, "N");
 
         //when
-        rover.executeCommand("MML");
+        rover.executeBatchCommands("MML");
 
         //then
         assertEquals(0, rover.getLocationX());
@@ -194,7 +194,7 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0,0, "N");
 
         //when
-        rover.executeCommand("MMRRMM");
+        rover.executeBatchCommands("MMRRMM");
 
         //then
         assertEquals(0, rover.getLocationX());
@@ -208,7 +208,7 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0,0, "N");
 
         //when
-        rover.executeCommand("RMLMLMLMLMMR");
+        rover.executeBatchCommands("RMLMLMLMLMMR");
 
         //then
         assertEquals(2, rover.getLocationX());
